@@ -1,9 +1,9 @@
 import pandas as pd
 
 filename = "data.csv"
-df = pd.read_csv(filename)
+df = pd.read_csv(filename, delimiter=";")
 
-data = df.iloc[:, [3, 4, 5]].values
+data = df[['AccelerationX', 'AccelerationY', 'AccelerationZ']].values
 
 print(data)
 
